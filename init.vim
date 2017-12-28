@@ -161,6 +161,7 @@ set showcmd
 set shell=/bin/bash
 
 " keep undo history across sessions by storing it in a file
+let vimDir = '$HOME/.config/nvim'
 if has('persistent_undo')
 	let myUndoDir = expand(vimDir . '/undodir')
 	" no console pops up
