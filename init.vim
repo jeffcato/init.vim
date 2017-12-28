@@ -41,12 +41,6 @@ Plug 'jeffcato/hulaline.vim'
 
 call plug#end()
 
-" ALE CONFIGURATION
-" ---------------------------------------------------
-let g:ale_sign_column_always = 1
-let g:ale_set_highlights = 0
-" ---------------------------------------------------
-
 " AIRLINE CONFIGURATION
 " ---------------------------------------------------
 let g:airline_theme = 'hulaline'
@@ -79,6 +73,12 @@ let g:airline_symbols.paste     = 'ρ'
 let g:airline_symbols.paste     = 'Þ'
 let g:airline_symbols.paste     = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
+" ---------------------------------------------------
+
+" ALE CONFIGURATION
+" ---------------------------------------------------
+let g:ale_sign_column_always = 1
+let g:ale_set_highlights = 0
 " ---------------------------------------------------
 
 " GENERAL CONFIGURATION
@@ -160,4 +160,9 @@ set fileformats=unix,dos,mac
 set showcmd
 set shell=/bin/bash
 
+" ---------------------------------------------------
+
+" NERDTREE CONFIGURATION
+" ---------------------------------------------------
+nnoremap <silent><leader>e :NERDTreeToggle<CR>
 " ---------------------------------------------------
