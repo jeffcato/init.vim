@@ -160,6 +160,15 @@ set fileformats=unix,dos,mac
 set showcmd
 set shell=/bin/bash
 
+" keep undo history across sessions by storing it in a file
+if has('persistent_undo')
+	let myUndoDir = expand(vimDir . '/undodir')
+	" no console pops up
+	call system('mkdir ' . myUndoDir)
+	let &undodir = myUndoDir
+	set undofile
+endif
+set undolevels=1000 "maximum number of changes that can be undone
 " ---------------------------------------------------
 
 " NERDTREE CONFIGURATION
